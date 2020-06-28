@@ -31,15 +31,15 @@ echo -e " ${Blue}             {+} Please make sure that your all Collector are r
 echo ""
 echo -e " ${Yellow}[+] Aquatone is discovering the domain of the site ..."
 aquatone-discover -d $url #| tee Report/$url/discover.txt
-mv /root/aquatone/$url/hosts.txt Report/$url/discover/
-mv /root/aquatone/$url/hosts.json Report/$url/discover/
+cp /root/aquatone/$url/hosts.txt Report/$url/discover/
+cp /root/aquatone/$url/hosts.json Report/$url/discover/
 echo -e " ${Yellow}[+] Aquatone is scanning the domain of the site..."
 aquatone-scan -d $url #| tee Report/$url/scan.txt
-mv /root/aquatone/$url/open_ports.txt Report/$url/scan/
-mv /root/aquatone/$url/urls.txt Report/$url/scan/
+cp /root/aquatone/$url/open_ports.txt Report/$url/scan/
+cp /root/aquatone/$url/urls.txt Report/$url/scan/
 echo -e " ${Yellow}[+] Aquatone is trying to takeover the domain of the site..."
 aquatone-takeover -d $url #| tee Report/$url/takeover.txt
-mv /root/aquatone/creditkarma.com/takeovers.json Report/$url/takeover/
+cp /root/aquatone/creditkarma.com/takeovers.json Report/$url/takeover/
 echo ""
 echo -e " ${White}./Done :-)"
 echo -e " ${White}./peace :-)"
