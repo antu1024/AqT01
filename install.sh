@@ -15,7 +15,7 @@ apt-get update >> update.txt
 rm update.txt
 echo -e "${Green} [#] Done."
 echo -e "${Red} [+] Installing RUBY..."
-apt-get install -y ruby >> ruby.txt
+apt-get install -y ruby-full >> ruby.txt
 rm ruby.txt
 apt-get install -y wpscan >> wp.txt
 rm wp.txt
