@@ -39,7 +39,7 @@ cp /root/aquatone/$url/open_ports.txt Report/$url/scan/
 cp /root/aquatone/$url/urls.txt Report/$url/scan/
 echo -e " ${Yellow}[+] Aquatone is trying to takeover the domain of the site..."
 aquatone-takeover -d $url #| tee Report/$url/takeover.txt
-cp /root/aquatone/creditkarma.com/takeovers.json Report/$url/takeover/
+cp /root/aquatone/$url/takeovers.json Report/$url/takeover/
 echo ""
 echo -e " ${White}./Done :-)"
 echo -e " ${White}./peace :-)"
