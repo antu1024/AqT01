@@ -7,7 +7,7 @@ Magenta="\u001b[35m"
 Cyan="\u001b[36m"
 White="\u001b[37m"
 printf "${Green}"
-figlet -f big "                                AqT01"
+figlet -f Doom "                                AqT01"
 echo ""
 printf "${STOP}"
 echo "                    @| Script Name : AqT01                          |@"
@@ -43,6 +43,11 @@ cp /root/aquatone/$url/takeovers.json Report/$url/takeover/
 echo ""
 echo -e " ${White}./Done :-)"
 echo -e " ${White}./peace :-)"
+rm /root/aquatone/$url/hosts.txt
+rm /root/aquatone/$url/hosts.json
+rm /root/aquatone/$url/open_ports.txt
+rm /root/aquatone/$url/urls.txt
+rm /root/aquatone/$url/takeovers.json
 echo ""
 echo -e " ${Cyan}                     @| Thanks for Using M3                     |@"
 echo -e " ${Magenta}                     @| Special Thanks [+] Aquatone Dev. Team   |@"
