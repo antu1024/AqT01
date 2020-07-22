@@ -5,9 +5,10 @@ Yellow="\u001b[33m"
 Blue="\u001b[34m"
 Magenta="\u001b[35m"
 Cyan="\u001b[36m"
+Red="\u001b[31m"
 White="\u001b[37m"
 printf "${Green}"
-figlet -f Doom "                                AqT01"
+figlet -f big "                                AqT01"
 echo ""
 printf "${STOP}"
 echo "                    @| Script Name : AqT01                          |@"
@@ -29,15 +30,23 @@ if [ ! -d "Report/$url/takeover" ];then
 fi
 echo -e " ${Blue}             {+} Please make sure that your all Collector are running {+}"
 echo ""
-echo -e " ${Yellow}[+] Aquatone is discovering the domain of the site ..."
+echo ""
+echo -e "${Red} [+] Target Site : "$url
+echo ""
+echo ""
+echo -e " ${Yellow}[+] Aquatone is discovering the domain of the site ...${White}"
 aquatone-discover -d $url #| tee Report/$url/discover.txt
 cp /root/aquatone/$url/hosts.txt Report/$url/discover/
 cp /root/aquatone/$url/hosts.json Report/$url/discover/
-echo -e " ${Yellow}[+] Aquatone is scanning the domain of the site..."
+echo ""
+echo ""
+echo -e " ${Yellow}[+] Aquatone is scanning the domain of the site...${White}"
 aquatone-scan -d $url #| tee Report/$url/scan.txt
 cp /root/aquatone/$url/open_ports.txt Report/$url/scan/
 cp /root/aquatone/$url/urls.txt Report/$url/scan/
-echo -e " ${Yellow}[+] Aquatone is trying to takeover the domain of the site..."
+echo ""
+echo ""
+echo -e " ${Yellow}[+] Aquatone is trying to takeover the domain of the site...${White}"
 aquatone-takeover -d $url #| tee Report/$url/takeover.txt
 cp /root/aquatone/$url/takeovers.json Report/$url/takeover/
 echo ""
